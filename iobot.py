@@ -8,6 +8,7 @@ import os
 # Echo output of a script to a discord server with a new channel
 # Set the discord token in the env variable DISCORD_TOKEN
 # Make sure you give appropriate permissions to the bot
+TOKEN = "your_token_here"
 
 class MyClient(discord.Client):
     def __init__(self, cmd, channel_name, desc, *args, **kwargs):
@@ -82,4 +83,4 @@ channel_name = sys.argv[2]
 desc = sys.argv[3]
 
 client = MyClient(cmd, channel_name, desc)
-client.run(os.environ["DISCORD_TOKEN"])
+client.run(TOKEN)

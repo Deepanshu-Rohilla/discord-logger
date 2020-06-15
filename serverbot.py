@@ -10,7 +10,7 @@ import socket
 # Gets data from discord server and publishes it to the socket
 # Set the discord token in the env variable DISCORD_TOKEN
 # Make sure you give appropriate permissions to the bot
-
+TOKEN = "your_token_here"
 class MyClient(discord.Client):
     def __init__(self, port, name, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -77,4 +77,4 @@ port = int(sys.argv[1])
 name = sys.argv[2]
 
 client = MyClient(port, name)
-client.run(os.environ["DISCORD_TOKEN"])
+client.run(TOKEN)
