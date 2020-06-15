@@ -51,3 +51,9 @@ bash test.sh | nc localhost 1337
 ```
 
 Your discord server should now have periodic messages containing obscure words. If you type any message in the channel, the bot will split on whitespace, remove the first word and print the message on the terminal running `test.sh`. Eg. if you type `hello world`, you should get `world` printed on the second terminal. 
+
+Regarding macOS users, make sure to install `coreutils` on your machine.
+
+```
+brew install coreutils
+```
